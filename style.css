@@ -6,7 +6,9 @@ html, body {
   margin: 0;
   padding: 0;
 }
-
+input[type="email"] {
+  background: white;
+}
 body {
   font-family: sans-serif;
   height: 100vh;
@@ -58,10 +60,13 @@ main {
   height: 400px;
   display: none;
   position: relative;
-  top: 50%;
+  margin: auto;
+  height: 400px;
+  border-radius: 20px;
+  /*top: 50%;
   left: 50%;
   transform: translate3d(-50%, -50%, 0);
-  /*gambiarra que centraliza - necessario colocar left e top*/
+  gambiarra que centraliza - necessario colocar left e top*/
 }
 
 .logo-login{
@@ -70,10 +75,12 @@ main {
   margin-top: 20px;
 }
 
+
 input{
   padding: 10px;
   margin: 10px;
   margin-top:10px;
+  margin-right:10px;
   border-radius: 20px 20px;
   border: 1px solid;
   border-color: #a6a6a6;
@@ -105,7 +112,7 @@ input{
 }
 
 #fundo.visivel{
-  display: block;
+  display: flex;
 }
 
 #botaofechar{
@@ -119,6 +126,113 @@ input{
   
 }
 
+#player{
+  background: rgba(0,0,0,.5);
+  height: 500px;
+  width: 60%;
+  display: flex;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 2px 3px 3px #0d0d0d;
+}
+
+figure{
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  position: relative;
+  margin-top: 100px;
+  margin-left: 90px;
+}
+
+h1{
+  display:flex;
+  margin-left: 9%; 
+  margin-bottom: 1%;
+  font-family: 'Play', sans-serif;
+  text-align: justify;
+}
+
+.titulomusica{
+  margin-top: 30%;
+}
+
+.musica{
+  width: 50%;
+}
+
+.player-controls{
+  margin-left: 8%;
+}
+
+.player-tempo{
+  display: flex;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.player-tempo span{
+  margin: 0 8px;
+}
+
+.player{
+  width:50px;
+  margin-right: 5%;
+}
+
+button{
+  background: none;
+  border: none;
+  display: flex;
+  padding-top: 1%;
+}
+
+
+.player-barra{
+  flex-grow: 1;
+  height: 5px;
+  background: #696363;
+ }
+
+ .tocado{
+   height: 5px;
+   background: #ffffff;
+ }
+
+.tempo-atual{
+  padding-right: 10px;
+  padding-top: 5px;
+}
+
+.duracao{
+  padding-left: 10px;
+  padding-top: 5px;
+}
+
 a{
   text-decoration: none;
+}
+
+
+.erro{
+  border: 2px solid #7f479a;
+  animation: shake 0.2s;
+}
+
+@keyframes shake{
+  0%{
+    transform: none;
+  }
+
+  33%{
+    transform: translateX(-5px);
+  }
+
+  66%{
+    transform: translateX(5px);
+  }
+
+  100%{
+    transform: none;
+  }
 }

@@ -20,3 +20,23 @@ fundo.onclick = function(e){
 }
 
 
+//login
+var email = document.querySelector("input[type='email'] ");
+var password = document.getElementById("password")
+var formulario = document.querySelector("form");
+formulario.onsubmit = function(){
+    if(email.value !== "admin@admin.com" || password.value !== "admin"){    
+    alert("Email errado");
+    modal.classList.add("erro");
+    setTimeout(function(){
+        modal.classList.remove('erro');
+    }, 1000);
+    return false;
+    }
+    localStorage.usuario = email.value;
+}
+
+
+
+console.log(email);
+

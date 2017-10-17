@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reprogramafy</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="logo-branco.png" alt="logo reprogramafy">
+      </div>
+      <button id="botao">Login</button>
+    </nav>
+  </header>
+  <main>
+
+    <div id="player">
+      <!-- Capa do album -->
+      <figure class="capa">
+        <img src="https://i.scdn.co/image/21d3c06fe84e08f0f14f16243d2c1e76a08c86b1" alt="Capa do album">
+      </figure>
+
+      <div class="musica">
+        <!-- Titulo da música -->
+        <h1 class="titulomusica">IS THAT FOR ME</h1>
+
+        <!-- Controles do player -->
+        <div class="player-controls">
+          <audio src="https://p.scdn.co/mp3-preview/1d9fe8b793a54f64d43f6413754de5755551f5cd?cid=8897482848704f2a8f8d7c79726a70d4"></audio>
+          
+          <!-- Tempo da música -->
+          <div class="player-tempo">
+          <button class="botao-play"><img src="player.svg" alt="" class="player"></button>
+            <span class="tempo-atual">00:00</span>
+
+            <!-- Barra de progresso da duração da música -->
+            <div class="player-barra">
+              <div class="tocado"></div>
+            </div>
+
+            <span class="duracao">01:00</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+  <script src="player.js"></script>
+  <script src="auth.js"></script>
+</body>
+</html>
