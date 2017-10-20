@@ -26,7 +26,7 @@ nav {
   box-shadow: 0px -1px 8px 0px #444;
 }
 
-nav > button {
+nav > div > button {
   background: #fff;
   border: none;
   padding: 10px 20px;
@@ -36,12 +36,28 @@ nav > button {
   font-weight: 700;
   box-shadow: 1px 1px 5px 0px #444;
   transition: background .3s cubic-bezier(0.19, 1, 0.22, 1), color .5s ease-out;
+  width: 90px;
+  text-align: center;
 }
 
-nav > button:hover {
+nav > div > button:hover {
   cursor: pointer;
   background: #7f479a;
   color: #fff;
+}
+
+#botao{
+  background: #fff;
+  border: none;
+  padding: 10px 20px;
+  color: #7f479a;
+  border-radius: 2px;
+  font-size: 12px;
+  font-weight: 700;
+  box-shadow: 1px 1px 5px 0px #444;
+  transition: background .3s cubic-bezier(0.19, 1, 0.22, 1), color .5s ease-out;
+  width: 90px;
+  text-align: center;
 }
 
 main {
@@ -53,19 +69,82 @@ main {
   padding: 0 20px;
 }
 
+main > h1{
+  margin-top: 350px;
+  margin-left: 100px;
+  font-size: 50px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+main > h2{
+  margin-left: 100px;
+  font-family: 'Droid Sans', sans-serif;
+}
+
+input{
+  margin: 10px;
+  border: darkgrey;
+  background-color: #d9d9d9;
+  border-radius: 20px;
+  padding: 10px;
+  width: 70%;
+  margin-left: 5px;
+}
+
+.box-botao > input{
+  width: 40%;
+  margin-top: 10%;
+}
+
+.botao-cadastrar > input{
+  width: 40%;
+  margin-top: 10%;
+}
+
+.button:hover{
+  cursor: pointer;
+  background-color: #7f479a;
+  color: #ffffff;
+}
+
+
 #modal{
   background-color: white;
   padding: 20px;
   text-align: center;
-  width: 220px;
+  width: 17%;
   position: relative;
   margin: auto;
-  height: 200px;
+  height: 45%;
+  border-radius: 20px;
 }
 
 #modal > img{
-  width: 100px;
+  width: 200px;
+  margin: 15px;
 }
+
+#modalCadastro{
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  width: 17%;
+  position: relative;
+  margin: auto;
+  height: 50%;
+  border-radius: 20px;
+}
+
+#modalCadastro > img{
+  width: 230px;
+  margin: 20px;
+}
+
+
+.logo-login{
+  margin: 3%;
+}
+
 
 #fundo {
   position: fixed;
@@ -214,7 +293,8 @@ main {
 }
 
 .slider > ul > li > img{
-  width: inherit;
+    height: 100vh;
+    object-fit: cover;
 }
 
 #playlist{
@@ -262,4 +342,77 @@ form{
   margin-left: 2.5%;
   margin-top: 1.5%;
   margin-bottom: 1%;
+}
+
+
+.modal, .modalCadastro {
+  background: white;
+  padding: 20px;
+  text-align: center;
+  width: 220px;
+  position: relative;
+  border-radius: 10px;
+  margin: auto;
+  height: 230px; 
+  
+  /*transform: translate3d(-50%, -50%, 0);*/
+}
+
+.modal > img, .modalCadastro > img {
+  width: 100px; 
+}
+
+#modal.visivel, #modalCadastro.visivel{
+  display: block;
+}
+
+#fundo, #fundoCadastro{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .4);
+  display: none;
+}
+
+#fundo.visivel, #fundoCadastro.visivel{
+  display: flex;
+}
+
+
+#fechar, #fecharCadastro{
+  color: #7f479a;
+  background: transparent;
+  border: none; 
+  position: absolute; 
+  top: 10px;
+  right: 10px;
+  font-size: 18px;
+
+}
+
+
+/* Adicionar a animação em quem tiver erro */
+.erro{
+  border: 2px solid red;
+  /*chama a animacao*/
+  animation: shake 0.2s 5;
+}
+
+
+/*ANIMACAO que treme o modal da tela quando der erro*/
+@keyframes shake{
+  0%{
+    transform: none;
+  }
+  33%{
+    transform: translateX(-5px); 
+  }
+  66%{
+    transform: translateY(5px);
+  }
+  100%{
+    transform: none;
+  }
 }

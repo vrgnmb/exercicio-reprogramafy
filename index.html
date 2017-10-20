@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Reprogramafy</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Droid+Sans|Ubuntu" rel="stylesheet">
 </head>
 <body>
   <header>
@@ -13,7 +14,10 @@
       <div class="logo">
         <img src="logo-branco.png" alt="logo reprogramafy">
       </div>
+      <div>
       <button id="botao">Login</button>
+      <button id="botaoCadastro">Cadastrar</button>
+      </div>
     </nav>
   </header>
   <main>
@@ -27,14 +31,29 @@
     <img src="logo-vertical.png" alt="logo-reprogramafy" class="logo-login">
    <div class="formulario">
    <form action="novidades.html">
-      <input type="email" required placeholder="Email"><br>
+      <input type="email" required id="email" placeholder="Email"><br>
       <input type="password" required placeholder="Senha" id="password"><br>
-      <input type="submit" value="Logar" class="button">
+      <div class="box-botao"><input type="submit" value="Logar" class="button"></div>
     </form>
    </div>
+  </div>
+</div>
+
+  <div id="fundoCadastro">
+    <div class="modalCadastro" id="modalCadastro">
+      <button id="fecharCadastro">x</button>
+      <img src="logo-vertical.png" alt="logo do reprogramafy">
+      <form action="">
+        <div><input type="text" required placeholder="Nome" id="nomeCadastro"></div>
+        <div><input type="email" required placeholder="E-mail" id="emailCadastro"></div>
+        <div><input type="password" required placeholder="Senha" id="senhaCadastro"></div>
+        <div class="botao-cadastrar"><button class="cadastrar">Cadastrar</button></div>
+      </form>
+    </div>
   </div>
 
 
     <script src="script.js"></script>
+    <script src="cadastro.js"></script>
 </body>
 </html>

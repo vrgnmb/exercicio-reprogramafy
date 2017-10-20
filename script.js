@@ -1,42 +1,56 @@
 var botao = document.getElementById("botao");
-var modal = document.getElementById("modal");
 var fundo = document.getElementById("fundo");
-var fechar = document.getElementById("fechar");
+var fechar = document.getElementById("botaofechar");
 
 
-botao.onclick = function(){
+botao.onclick = function () {
     fundo.classList.add("visivel");
-    modal.classList.add("visivel");
+    console.log("cliquei");
 }
 
-botaofechar.onclick = function(){
+fechar.onclick = function () {
     fundo.classList.remove("visivel");
 }
 
-fundo.onclick = function(e){
-    if (e.target == fundo){
-    fundo.classList.remove("visivel");
-}
-}
-
-
-//login
-var email = document.querySelector("input[type='email'] ");
-var password = document.getElementById("password")
-var formulario = document.querySelector("form");
-formulario.onsubmit = function(){
-    if(email.value !== "admin@admin.com" || password.value !== "admin"){    
-    alert("Email errado");
-    modal.classList.add("erro");
-    setTimeout(function(){
-        modal.classList.remove('erro');
-    }, 1000);
-    return false;
+fundo.onclick = function (e) {
+    if (e.target == fundo) {
+        fundo.classList.remove("visivel");
     }
-    localStorage.usuario = email.value;
 }
 
+//Seleciona o formulario
+var form = document.querySelector('form');
+//Quando for enviar mandar os dados
+form.onsubmit = function (e) {
+    // Seleciona os inputs
+    var email = document.querySelector('#email');
+    var password = document.querySelector('#password');
 
+    //Seleciona a modal 
+    var modal = document.querySelector('#modal');
 
-console.log(email);
+    //Verifica se o email e senha são permitidos
+    var usuarios = JSON.parse(localStorage.usuarios);
+    var correto;
+    for (var i = 0; i < usuarios.length; i++) {
+        if (usuarios[i].email === email.value && usuarios[i].senha === password.value) {
+            correto = true;
+            localStorage.usuario = usuarios[i].email;
+            break;
+        }
+    }
+
+    if (!correto) {
+        //adiciona classe de erro no modal pra mostrar um feedback
+        modal.classList.add('erro');
+
+        //remove a classe com erro depois de fazer a animação
+        setTimeout(function () {
+            modal.classList.remove('erro');
+        }, 1000);
+
+        //Não deixa o usuário enviar o formulário
+        return false;
+    }
+}
 
