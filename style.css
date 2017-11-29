@@ -112,10 +112,10 @@ input{
   background-color: white;
   padding: 20px;
   text-align: center;
-  width: 17%;
+  width: 25%;
   position: relative;
   margin: auto;
-  height: 45%;
+  height: 60%;
   border-radius: 20px;
 }
 
@@ -128,10 +128,10 @@ input{
   background-color: white;
   padding: 20px;
   text-align: center;
-  width: 17%;
+  width: 25%;
   position: relative;
   margin: auto;
-  height: 50%;
+  height: 70%;
   border-radius: 20px;
 }
 
@@ -217,7 +217,7 @@ input{
   width: 60px;
   height: 60px;
   color: #fff;
-  background: url(play.svg);
+  background: url(player.svg);
   background-size: cover;
   border: none;
   margin-bottom: 20px;
@@ -292,10 +292,13 @@ input{
   width: inherit;
 }
 
-.slider > ul > li > img{
+.slider > ul > li  img{
     height: 100vh;
+    width: 100%;
     object-fit: cover;
 }
+
+
 
 #playlist{
   padding: 40px;
